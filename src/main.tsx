@@ -11,6 +11,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar.tsx'
+import Dashboard from './pages/Dashboard.tsx'
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,12 @@ const router = createBrowserRouter([
       <Result />
     </>
   },
+  {
+    path:'/dashboard', element: <>
+      <Navbar />
+      <Dashboard />
+    </>
+  }
 ])
 
 createRoot(document.getElementById('root')!).render(

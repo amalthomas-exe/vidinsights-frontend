@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Info } from 'lucide-react'
-import { Skeleton } from './ui/skeleton'
 import ExplanationBox from './ExplanationBox'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus as theme } from 'react-syntax-highlighter/dist/cjs/styles/prism';

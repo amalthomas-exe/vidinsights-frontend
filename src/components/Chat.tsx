@@ -12,12 +12,12 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 import { MessageCircle, SendHorizonal } from "lucide-react"
-import { useSelector } from "react-redux";
 import Login from "./Navbar/Login";
 import axios from "axios";
 import { API_URL } from "@/constants";
 import { Separator } from '@/components/ui/separator';
 import { Skeleton } from "@/components/ui/skeleton";
+import { useSelector } from "react-redux";
 
 interface ChatItem {
     parts: string
@@ -33,7 +33,7 @@ const Chat: React.FC = () => {
     const [chatMounted, setChatMounted] = useState<boolean>(false)
 
     useEffect(() => {
-        if (!chatMounted) {
+        if (!chatMounted && token) {
             console.log("fetching chat")
 
             axios.get(`${API_URL}/api/chat/history`, {

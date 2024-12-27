@@ -95,7 +95,9 @@ const Navbar: React.FC = () => {
                             <DropdownMenuLabel>{user.name}</DropdownMenuLabel>
                             <DropdownMenuSeparator />
                             <DropdownMenuGroup>
-                                <DropdownMenuItem>
+                                <DropdownMenuItem onClick={()=>{
+                                    navigate('/dashboard')
+                                }}>
                                     Profile
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>

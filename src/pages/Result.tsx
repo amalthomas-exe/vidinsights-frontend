@@ -18,6 +18,7 @@ import TableOfContents from '@/components/TableOfContents';
 import Mindmap from '@/components/Mindmap';
 import DetailedNotes from '@/components/DetailedNotes';
 import Chat from '@/components/Chat';
+import { GetRequest } from '@/services/API';
 
 
 
@@ -63,7 +64,7 @@ const Result: React.FC = () => {
 
         const fetchData = async () => {
             try {
-                const videoMetaDataRes = await axios.get(`${API_URL}/api/video_metadata/${id}`);
+                const videoMetaDataRes = await GetRequest(`api/video_metadata/${id}`);
                 if (isMounted) {
                     document.title = videoMetaDataRes.data.video_metadata.title;
                     setLoadingValue(20);
