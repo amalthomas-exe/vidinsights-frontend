@@ -33,8 +33,8 @@ const Dashboard: React.FC = () => {
     return (
        loading ? <LoadingPage value={loadingValue} /> : <section className="pt-20 p-5 flex flex-col lg:flex-row w-full min-h-screen bg-gray-100 selection:bg-gray-600 selection:text-white">
             <div className="w-full">
-                <h1 className="text-xl font-semibold">Your videos</h1>
-                <div className="mt-5 flex flex-col lg:flex-row ">
+                <h1 className="text-x mt-10 font-semibold">Your videos</h1>
+                <div className="mt-5 flex flex-col lg:flex-row lg:flex-wrap">
                     {data?.map((video: any, index: number) => (
                         <div key={index} className="bg-white rounded-lg shadow-sm mb-5  w-full lg:w-[20%] m-2 hover:shadow-xl transition duration-300 cursor-pointer" onClick={() => navigate(`/${video.video_id}`)}>
                             <img src={video.thumbnail_url} alt="thumbnail" className="rounded-t-lg w-full aspect-video" />

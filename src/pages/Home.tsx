@@ -1,8 +1,10 @@
-import React,{useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import WordRotate from "@/components/ui/word-rotate";
 import { cn } from "@/lib/utils";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import ShimmerButton from "@/components/ui/shimmer-button";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+
 import { useNavigate } from "react-router-dom";
 
 const Home: React.FC = () => {
@@ -11,6 +13,12 @@ const Home: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        if (!videoURL
+            .match(/^(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+/)) {
+            alert("Please enter a valid youtube video link");
+            return;
+        }
+
         let id = videoURL.split("v=")[1];
         navigate(`/${id}`);
     };

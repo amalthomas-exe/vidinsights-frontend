@@ -150,7 +150,7 @@ const Result: React.FC = () => {
                 </div>
 
                 <div className='flex flex-col w-full lg:w-2/3 h-full z-10 ml-0 lg:ml-7 mt-10 lg:mt-0'>
-                    <div className="flex flex-col w-[80%]">
+                    <div className="flex flex-col w-full lg:w-[80%]">
                         <h1 className="text-3xl font-bold">{videoMetaData.title}</h1>
                         <p className="text-lg mt-2 font-semibold text-gray-600">{videoMetaData.author}</p>
                     </div>

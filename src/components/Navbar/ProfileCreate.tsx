@@ -80,7 +80,7 @@ const ProfileCreate: React.FC<ProfileCreateProps> = ({ setDialogOpen }) => {
         let data = {
             name: name,
             user_type: value,
-            profile_image: `https://api.multiavatar.com/${name}.svg?apikey=c7itYWZfJaQHPK`
+            profile_image: `https://api.dicebear.com/9.x/thumbs/svg?seed=${name}`
         }
 
         setLoading(true)
@@ -93,7 +93,7 @@ const ProfileCreate: React.FC<ProfileCreateProps> = ({ setDialogOpen }) => {
                 console.log(res.data)
                 dispatch(setName(name))
                 dispatch(setUserType(value))
-                dispatch(setProfileImage(`https://api.multiavatar.com/${name}.svg?apikey=c7itYWZfJaQHPK`))
+                dispatch(setProfileImage(`https://api.dicebear.com/9.x/thumbs/svg?seed=${name}`))
                 setDialogOpen(false)
             })
             .catch((err) => {
