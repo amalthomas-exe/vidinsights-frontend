@@ -8,6 +8,7 @@ import {
     TabsList,
     TabsTrigger,
 } from "@/components/ui/tabs"
+import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import YouTube, { YouTubeProps } from 'react-youtube'
 import LoadingPage from '@/components/LoadingPage';
@@ -184,6 +185,23 @@ const Result: React.FC = () => {
                         <Mindmap code={code} />
                     </TabsContent>
                 </Tabs>
+            </section>
+
+            <section className='p-5 flex-col w-full items-center justify-center text-white bg-gray-100 selection:bg-gray-600 selection:text-white '>
+                <div className="flex flex-col w-[90%] bg-gradient-to-r from-[#808080] to-[#3a393a] p-5 rounded-lg shadow-md">
+                    <h1 className='text-2xl font-semibold'>Done reading?</h1>
+                    <p className='text-base lg:text-lg  mt-2'>
+                        Test out your knowledge by taking this curated quiz, or quickly brush up your memory using the flashcards.
+                    </p>
+
+                    <div className='flex flex-row mt-5'>
+                        <Button>Go to quiz</Button>
+
+                        <Button variant="secondary" className='ml-5' onClick={()=>{
+                            navigate(`/flashcards/${id}`)
+                        }}>Flashcards</Button>
+                    </div>
+                </div>
             </section>
 
             <Chat />

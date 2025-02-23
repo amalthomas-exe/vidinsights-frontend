@@ -6,6 +6,7 @@ import { store } from './store'
 import './index.css'
 import Home from './pages/Home.tsx'
 import Result from './pages/Result.tsx'
+import FlashcardPage from './pages/FlashcardPage.tsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -31,6 +32,12 @@ const router = createBrowserRouter([
     path:'/dashboard', element: <>
       <Navbar />
       <Dashboard />
+    </>
+  },
+  {
+    path: '/flashcards/:id', element: <>
+      <Navbar />
+      <FlashcardPage />
     </>
   }
 ])
