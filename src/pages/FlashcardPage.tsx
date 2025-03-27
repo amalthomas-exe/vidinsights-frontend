@@ -4,7 +4,6 @@ import axios from 'axios'
 import { API_URL } from '@/constants'
 import LoadingPage from '@/components/LoadingPage'
 import { CircleArrowLeft, CircleArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 
 const COLORS = [
     "#EFD1D7",

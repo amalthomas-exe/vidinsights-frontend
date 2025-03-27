@@ -195,7 +195,9 @@ const Result: React.FC = () => {
                     </p>
 
                     <div className='flex flex-row mt-5'>
-                        <Button>Go to quiz</Button>
+                        <Button onClick={()=>{
+                            navigate(`/quiz/${id}`)
+                        }}>Go to quiz</Button>
 
                         <Button variant="secondary" className='ml-5' onClick={()=>{
                             navigate(`/flashcards/${id}`)

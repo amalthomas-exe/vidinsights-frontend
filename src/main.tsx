@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar.tsx'
 import Dashboard from './pages/Dashboard.tsx'
+import { Quiz } from './pages/Quiz.tsx'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,12 @@ const router = createBrowserRouter([
     path: '/flashcards/:id', element: <>
       <Navbar />
       <FlashcardPage />
+    </>
+  },
+  {
+    path: '/quiz/:id', element: <>
+      <Navbar />
+      <Quiz />
     </>
   }
 ])
